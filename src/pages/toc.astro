@@ -1,10 +1,8 @@
 ---
-import Layout from "../layouts/Layout.astro";
-
 import { getEntry } from "astro:content";
 
 const toc = await getEntry("remark", "toc");
-const { Content, headings } = await toc.render();
+const { Content } = await toc.render();
 ---
 
 <h1>{toc.data.title}</h1>
